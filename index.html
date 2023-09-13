@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Roboto+Condensed:wght@300;400;700&family=Roboto:ital,wght@0,100;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- icons links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="crud">
+
+
+
+
+        <div class="head">
+            <h1>crud</h1>
+            <p>product management system</p>
+        </div>
+
+
+
+
+
+
+
+        <div class="inputs">
+            <input placeholder="  Title" id="title" type="text">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" placeholder="  price" id="price">
+                <input onkeyup="getTotal()" type="number" placeholder="  taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="  ads" id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="  discount" id="discount">
+                <small id="total"></small>
+            </div>
+            <input placeholder="count" type="number" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit">Create</button>
+            <div class="searchblok">
+                <input onkeyup="searchData(this.value)" id="search" type="text" placeholder="Search">
+                <div class="btnsearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+            </div>
+            <div id="deleteAll">
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="outputs">
+            <!-- <div class="searchblok">
+                <input onkeyup="searchData(this.value)" id="search" type="text" placeholder="Search">
+                <div class="btnsearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+            </div>
+            <div id="deleteAll">
+
+
+            </div> -->
+            <table>
+                <tr>
+                    <td>id</td>
+                    <td>title</td>
+                    <td>price</td>
+                    <td>taxes</td>
+                    <td>ads</td>
+                    <td>discount</td>
+                    <td>total</td>
+                    <td>category</td>
+                    <td>update</td>
+                    <td>delete</td>
+                </tr>
+
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
